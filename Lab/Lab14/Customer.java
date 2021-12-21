@@ -25,7 +25,7 @@ class Customer {
             double thisAmount = 0;
 
             //determine amounts for each line
-            thisAmount = each.amountFor();
+
             // add frequent renter points
             frequentRenterPoints ++;
             // add bonus for a two day new release rental
@@ -34,10 +34,10 @@ class Customer {
 
             //show figures for this rental
             result.append("\t").append(each.getTitle());
-            result.append("\t").append(String.valueOf(thisAmount));
+            result.append("\t").append(String.valueOf(each.getCharge()));
             result.append("\n");
 
-            totalAmount += thisAmount;
+            totalAmount += each.getCharge();
         }
 
         //add footer lines
