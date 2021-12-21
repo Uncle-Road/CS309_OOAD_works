@@ -22,10 +22,6 @@ class Customer {
         StringBuilder result = new StringBuilder("Rental Record for " + getName() + "\n");
 
         for (Rental each : _rentals) {
-            double thisAmount = 0;
-
-            //determine amounts for each line
-
             // add frequent renter points
             frequentRenterPoints ++;
             // add bonus for a two day new release rental
@@ -47,5 +43,7 @@ class Customer {
         result.append(" frequent renter points");
         return result.toString();
     }
+
+
 
 }
