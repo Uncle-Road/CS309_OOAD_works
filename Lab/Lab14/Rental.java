@@ -12,6 +12,10 @@ class Rental {
         _daysRented = (int) ((dateRange.getEnd().getTime() - dateRange.getStart().getTime()) / (1000 * 60 * 60 * 24));
     }
 
+    public Movie getMovie() {
+        return _movie;
+    }
+
     public int getDaysRented() {
         return _daysRented;
     }
