@@ -1,8 +1,4 @@
 class Rental {
-    public Movie getMovie() {
-        return _movie;
-    }
-
     private Movie _movie;
 
     private int _daysRented;
