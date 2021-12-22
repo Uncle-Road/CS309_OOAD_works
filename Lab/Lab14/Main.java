@@ -21,12 +21,15 @@ public class Main {
 
         M1_Title = "Oz The Great and Powerful";
         M1_PriceCode = Movie.NEW_RELEASE;
+        Movie M1 = new Movie(M1_Title,M1_PriceCode);
 
         M2_Title = "The Dark Knight";
         M2_PriceCode = Movie.REGULAR;
+        Movie M2 = new Movie(M2_Title,M2_PriceCode);
 
         M3_Title = "Wreck-it Ralph";
         M3_PriceCode = Movie.CHILDRENS;
+        Movie M3 = new Movie(M3_Title,M3_PriceCode);
 
         Date start = new Date(2013, 7, 1);
         Date end1 = new Date(2013, 7, 6);
