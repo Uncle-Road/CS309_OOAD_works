@@ -8,6 +8,10 @@ class Rental {
         _daysRented = (int) ((dateRange.getEnd().getTime() - dateRange.getStart().getTime()) / (1000 * 60 * 60 * 24));
     }
 
+    public Movie getMovie() {
+        return _movie;
+    }
+
     public int getDaysRented() {
         return _daysRented;
     }
@@ -21,34 +25,11 @@ class Rental {
     }
 
     public double getCharge() {
-        double thisAmount = 0;
-        switch (getPriceCode()) {
-            case Movie.REGULAR:
-                thisAmount += 2;
-                if (getDaysRented() > 2) {
-                    thisAmount += (getDaysRented() - 2) * 1.5;
-                }
-                break;
-            case Movie.NEW_RELEASE:
-                thisAmount += getDaysRented() * 3;
-                break;
-            case Movie.CHILDRENS:
-                thisAmount += 1.5;
-                if (getDaysRented() > 3) {
-                    thisAmount += (getDaysRented() - 3) * 1.5;
-                }
-                break;
-        }
-        return thisAmount;
+        return _movie.getCharge(_daysRented);
     }
 
     public int getFrequentRenterPoints() {
-        int frequentRenterPoints = 0;
-        frequentRenterPoints++;
-        if (getPriceCode()==Movie.NEW_RELEASE && getDaysRented() > 1){
-            frequentRenterPoints++;
-        }
-        return frequentRenterPoints;
+        return _movie.getFrequentRenterPoints(_daysRented);
     }
 
 
